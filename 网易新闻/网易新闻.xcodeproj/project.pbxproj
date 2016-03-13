@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1DE9CFDB1D603DA995124C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BDD8622232FE97DB64762F /* libPods.a */; };
 		472142EC1C958D1600E06D53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472142EB1C958D1600E06D53 /* main.m */; };
 		472142EF1C958D1600E06D53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472142EE1C958D1600E06D53 /* AppDelegate.m */; };
 		472142F21C958D1600E06D53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472142F11C958D1600E06D53 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26BDD8622232FE97DB64762F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		308E3829447101E70E97A647 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		472142E71C958D1600E06D53 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472142EB1C958D1600E06D53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		472142ED1C958D1600E06D53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		472142F61C958D1600E06D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472142F91C958D1600E06D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472142FB1C958D1600E06D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8914221FACFE1367F2FC907E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1DE9CFDB1D603DA995124C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				472142E91C958D1600E06D53 /* 网易新闻 */,
 				472142E81C958D1600E06D53 /* Products */,
+				8D01D8119D5A3A532D6C5176 /* Pods */,
+				5CA3B2B5DAD24D75B002D572 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5CA3B2B5DAD24D75B002D572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26BDD8622232FE97DB64762F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D01D8119D5A3A532D6C5176 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				308E3829447101E70E97A647 /* Pods.debug.xcconfig */,
+				8914221FACFE1367F2FC907E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 472142FE1C958D1600E06D53 /* Build configuration list for PBXNativeTarget "网易新闻" */;
 			buildPhases = (
+				90C693264BA65F5674E739E1 /* Check Pods Manifest.lock */,
 				472142E31C958D1600E06D53 /* Sources */,
 				472142E41C958D1600E06D53 /* Frameworks */,
 				472142E51C958D1600E06D53 /* Resources */,
+				572912D23CF3D34FD707376F /* Embed Pods Frameworks */,
+				4A7C56CDF6B939B855A2CD4D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A7C56CDF6B939B855A2CD4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		572912D23CF3D34FD707376F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C693264BA65F5674E739E1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		472142E31C958D1600E06D53 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		472142FF1C958D1600E06D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 308E3829447101E70E97A647 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "网易新闻/Info.plist";
@@ -271,6 +347,7 @@
 		};
 		472143001C958D1600E06D53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8914221FACFE1367F2FC907E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "网易新闻/Info.plist";
@@ -299,6 +376,7 @@
 				472143001C958D1600E06D53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
